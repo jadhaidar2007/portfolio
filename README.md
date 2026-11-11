@@ -28,8 +28,8 @@ this repo, but here is what I build:
 - **WhatsApp lead-capture bots.** Incoming WhatsApp messages (Twilio) are answered by an
   LLM (GPT-4o-mini) that collects the lead's details and logs them to Google Sheets,
   built as n8n workflows.
-- **Real estate lead bots.** Bots for property businesses that respond to enquiries
-  straight away, qualify the lead, and pass it on to the agent.
+- **Real estate lead bots.** Bots for property businesses that score every incoming
+  lead as hot, warm or cold, so agents know who to call first.
 - **Class-booking web app for CrossFit 961 (Lebanon).** Built end to end, from
   requirements to delivery, as a replacement for their booking software.
 - **Model selection for client automations.** Compared commercial and open-source
