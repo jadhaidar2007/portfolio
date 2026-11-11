@@ -1,0 +1,20 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 08 Nov
+Date: Sun, 08 Nov 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Blue Heron | 270kt | MEG | CHINA | 15-17 Nov | WS 68.0 | VITOL | SUBS |
+| Nordic Star | 130kt | WAF | UKC | 26-28 Nov | WS 90.9 | TRAFIGURA | FLD |
+| Amber Tide | 130kt | WAF | UKC | 19-21 Nov | WS 92.9 | SHELL | FXD |
+| Red Kite | 130kt | WAF | UKC | 17-19 Nov | WS 90.0 | EQUINOR | FXD |
+| Grey Petrel | 70kt | USG | UKC | 18-20 Nov | WS 150.8 | EQUINOR | FXD |
+| Sea Lantern | 70kt | USG | UKC | 21-23 Nov | WS 150.1 | SHELL | FXD |
+
+Gulfline Tankers

@@ -1,0 +1,4 @@
+pyyaml>=6.0
+pytest>=8.0
+# optional: enables Claude-written answers and drafts (set ANTHROPIC_API_KEY)
+anthropic>=0.40

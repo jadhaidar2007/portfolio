@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+*.db
+fixture-intel/out/
+llm-wiki/drafts/

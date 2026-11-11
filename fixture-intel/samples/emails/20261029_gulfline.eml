@@ -1,0 +1,18 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 29 Oct
+Date: Thu, 29 Oct 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Grey Petrel | 270kt | MEG | CHINA | 5-7 Nov | WS 56.1 | BP | FLD |
+| Polar Wind | 270kt | MEG | CHINA | 10-12 Nov | WS 58.7 | EQUINOR | FXD |
+| Atlas Spirit | 130kt | WAF | UKC | 18-20 Nov | WS 95.8 | SHELL | FXD |
+| Morning Calm | 70kt | USG | UKC | 16-18 Nov | WS 153.8 | EQUINOR | FXD |
+
+Gulfline Tankers

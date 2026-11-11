@@ -1,0 +1,16 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 09 Nov
+Date: Mon, 09 Nov 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Atlas Spirit | 270kt | MEG | CHINA | 18-20 Nov | WS 69.5 | EQUINOR | FXD |
+| Iron Gull | 70kt | USG | UKC | 25-27 Nov | WS 158.4 | TOTAL | SUBS |
+
+Gulfline Tankers

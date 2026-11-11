@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixture Intelligence — demo</title>
+<style>
+  :root { --bg:#0b1220; --panel:#111a2e; --line:#1f2a44; --text:#e5e7eb; --muted:#8b95a7; --up:#22c55e; --down:#ef4444; --accent:#60a5fa; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:14px/1.45 system-ui, -apple-system, Segoe UI, sans-serif; }
+  header { padding:20px 28px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; }
+  header h1 { margin:0; font-size:18px; font-weight:600; }
+  header span { color:var(--muted); font-size:12px; }
+  main { padding:20px 28px; display:grid; gap:16px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  .big { font-size:26px; font-weight:600; margin-top:4px; }
+  .chg { font-size:13px; margin-left:6px; }
+  .up { color:var(--up); } .down { color:var(--down); }
+  .filters { display:flex; gap:8px; flex-wrap:wrap; }
+  select { background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:6px; padding:6px 8px; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th { color:var(--muted); font-weight:500; position:sticky; top:0; background:var(--panel); }
+  .tablewrap { max-height:460px; overflow:auto; }
+  .pill { padding:2px 8px; border-radius:999px; font-size:12px; }
+  .fixed { background:#14532d; } .subs { background:#713f12; } .failed { background:#7f1d1d; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Tanker Fixture Intelligence</h1>
+  <span id="asof">synthetic demo data</span>
+</header>
+<main>
+  <section class="cards" id="cards"></section>
+  <section class="card">
+    <div class="filters">
+      <select id="status"><option value="">All statuses</option><option>fixed</option><option>subs</option><option>failed</option></select>
+      <select id="broker"><option value="">All brokers</option><option>Northsea</option><option>Gulfline</option><option>Harbour &amp; Co</option></select>
+      <select id="load"><option value="">All load areas</option><option>MEG</option><option>WAF</option><option>USG</option></select>
+    </div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>Reported</th><th>Vessel</th><th>Size</th><th>Route</th><th>Laycan</th><th>Rate</th><th>Charterer</th><th>Status</th><th>Source</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script>
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function spark(values) {
+  if (values.length < 2) return '';
+  const w = 200, h = 40, lo = Math.min(...values), hi = Math.max(...values), span = (hi - lo) || 1;
+  const pts = values.map((v, i) => `${(i * w / (values.length - 1)).toFixed(1)},${(h - 3 - (v - lo) / span * (h - 6)).toFixed(1)}`).join(' ');
+  const color = values.at(-1) >= values[0] ? 'var(--up)' : 'var(--down)';
+  return `<svg width="100%" height="${h}" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline fill="none" stroke="${color}" stroke-width="2" points="${pts}"/></svg>`;
+}
+
+async function loadSummary() {
+  const s = await (await fetch('/api/summary')).json();
+  document.getElementById('asof').textContent = `as of ${s.as_of} · ${s.total} fixtures · synthetic demo data`;
+  const cards = Object.entries(s.routes).sort().map(([route, r]) => `
+    <div class="card">
+      <div class="label">${esc(route)}</div>
+      <div class="big">WS ${r.latest_ws}<span class="chg ${r.change >= 0 ? 'up' : 'down'}">${r.change >= 0 ? '+' : ''}${r.change}</span></div>
+      ${spark(r.series)}
+    </div>`);
+  cards.push(`<div class="card"><div class="label">Most active charterers</div>
+    ${s.top_charterers.map(([c, n]) => `<div>${esc(c)} <span style="color:var(--muted)">· ${n}</span></div>`).join('')}</div>`);
+  document.getElementById('cards').innerHTML = cards.join('');
+}
+
+async function loadRows() {
+  const params = new URLSearchParams();
+  for (const id of ['status', 'broker', 'load']) {
+    const v = document.getElementById(id).value;
+    if (v) params.set(id, v);
+  }
+  const rows = await (await fetch('/api/fixtures?' + params)).json();
+  document.getElementById('rows').innerHTML = rows.map(f => `<tr>
+    <td>${f.reported_on}</td><td>${esc(f.vessel)}</td><td>${f.size_kt}kt</td><td>${esc(f.route)}</td>
+    <td>${esc(f.laycan)}</td><td>${f.rate_type === 'WS' ? 'WS ' + f.rate : '$' + (f.rate / 1e6).toFixed(2) + 'm'}</td>
+    <td>${esc(f.charterer)}</td><td><span class="pill ${f.status}">${f.status}</span></td><td>${esc(f.broker)}</td></tr>`).join('');
+}
+
+for (const id of ['status', 'broker', 'load']) document.getElementById(id).addEventListener('change', loadRows);
+loadSummary(); loadRows();
+</script>
+</body>
+</html>

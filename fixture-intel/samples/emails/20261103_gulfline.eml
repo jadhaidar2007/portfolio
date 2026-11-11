@@ -1,0 +1,16 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 03 Nov
+Date: Tue, 03 Nov 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Ocean Pearl | 130kt | WAF | UKC | 15-17 Nov | WS 86.8 | SHELL | FXD |
+| Cape Aurora | 130kt | WAF | UKC | 11-13 Nov | WS 89.2 | SHELL | FLD |
+
+Gulfline Tankers

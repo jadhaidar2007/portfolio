@@ -1,0 +1,5 @@
+flask>=3.0
+pytest>=8.0
+# only for live mailbox ingestion (run_pipeline.py --graph)
+msal>=1.28
+requests>=2.31

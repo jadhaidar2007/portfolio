@@ -1,0 +1,18 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 07 Nov
+Date: Sat, 07 Nov 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Saga Venture | 270kt | MEG | CHINA | 16-18 Nov | WS 66.4 | EQUINOR | FXD |
+| Amber Tide | 130kt | WAF | UKC | 18-20 Nov | WS 90.2 | RELIANCE | FXD |
+| Silver Fjord | 130kt | WAF | UKC | 19-21 Nov | WS 89.8 | BP | FXD |
+| Nordic Star | 70kt | USG | UKC | 27-29 Nov | WS 155.6 | TRAFIGURA | FXD |
+
+Gulfline Tankers

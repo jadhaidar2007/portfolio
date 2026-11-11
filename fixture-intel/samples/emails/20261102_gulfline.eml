@@ -1,0 +1,17 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 02 Nov
+Date: Mon, 02 Nov 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Kestrel | 270kt | MEG | CHINA | 21-23 Nov | WS 58.7 | UNIPEC | FXD |
+| Blue Heron | 130kt | WAF | UKC | 16-18 Nov | WS 90.9 | TRAFIGURA | FXD |
+| Red Kite | 70kt | USG | UKC | 17-19 Nov | WS 151.7 | EQUINOR | SUBS |
+
+Gulfline Tankers

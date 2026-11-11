@@ -1,0 +1,17 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 05 Nov
+Date: Thu, 05 Nov 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Grey Petrel | 130kt | WAF | UKC | 21-23 Nov | WS 91.5 | VITOL | FLD |
+| Red Kite | 70kt | USG | UKC | 23-25 Nov | WS 156.7 | VITOL | FLD |
+| Kestrel | 70kt | USG | UKC | 12-14 Nov | WS 159.6 | RELIANCE | SUBS |
+
+Gulfline Tankers

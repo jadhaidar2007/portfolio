@@ -1,0 +1,16 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 10 Nov
+Date: Tue, 10 Nov 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Blue Heron | 270kt | MEG | CHINA | 17-19 Nov | WS 68.2 | RELIANCE | FXD |
+| Morning Calm | 70kt | USG | UKC | 24-26 Nov | WS 153.9 | RELIANCE | FXD |
+
+Gulfline Tankers

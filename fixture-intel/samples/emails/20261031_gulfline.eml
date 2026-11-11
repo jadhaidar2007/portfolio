@@ -1,0 +1,20 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 31 Oct
+Date: Sat, 31 Oct 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Harbor Light | 270kt | MEG | CHINA | 15-17 Nov | WS 61.2 | TOTAL | SUBS |
+| Silver Fjord | 270kt | MEG | CHINA | 15-17 Nov | WS 58.2 | TRAFIGURA | FXD |
+| Ocean Pearl | 130kt | WAF | UKC | 15-17 Nov | WS 93.9 | TRAFIGURA | SUBS |
+| Atlas Spirit | 130kt | WAF | UKC | 16-18 Nov | WS 97.2 | TRAFIGURA | SUBS |
+| Coral Dawn | 130kt | WAF | UKC | 19-21 Nov | WS 94.3 | TRAFIGURA | FXD |
+| Polar Wind | 70kt | USG | UKC | 15-17 Nov | WS 158.1 | UNIPEC | FXD |
+
+Gulfline Tankers

@@ -1,0 +1,19 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 30 Oct
+Date: Fri, 30 Oct 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Nordic Star | 270kt | MEG | CHINA | 8-10 Nov | WS 58.3 | EQUINOR | FXD |
+| Morning Calm | 130kt | WAF | UKC | 8-10 Nov | WS 96.6 | RELIANCE | FXD |
+| Ocean Pearl | 130kt | WAF | UKC | 14-16 Nov | WS 99.4 | VITOL | FXD |
+| Coral Dawn | 130kt | WAF | UKC | 17-19 Nov | WS 101.4 | UNIPEC | SUBS |
+| Atlas Spirit | 70kt | USG | UKC | 19-21 Nov | WS 161.0 | RELIANCE | SUBS |
+
+Gulfline Tankers

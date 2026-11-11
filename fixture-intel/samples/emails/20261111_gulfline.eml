@@ -1,0 +1,17 @@
+From: fixtures@gulfline.example
+To: chartering@demo-trader.example
+Subject: Tanker fixtures 11 Nov
+Date: Wed, 11 Nov 2026 07:30:00 -0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dirty tanker fixtures today:
+
+| Vessel | Qty | Load | Disch | Laycan | Rate | Chrtr | Status |
+|---|---|---|---|---|---|---|---|
+| Saga Venture | 270kt | MEG | CHINA | 21-23 Nov | WS 68.9 | RELIANCE | FXD |
+| Iron Gull | 70kt | USG | UKC | 19-21 Nov | WS 158.6 | BP | FLD |
+| Sea Lantern | 70kt | USG | UKC | 18-20 Nov | WS 157.5 | BP | FXD |
+
+Gulfline Tankers

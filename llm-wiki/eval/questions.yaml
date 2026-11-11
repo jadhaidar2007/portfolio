@@ -1,0 +1,33 @@
+# Retrieval eval. `expected`: page that must be in the top-k.
+# `forbidden`: page this role must never reach (permission test).
+- question: What is the maximum grant amount?
+  role: viewer
+  expected: eligibility
+- question: Can a university lead a project?
+  role: viewer
+  expected: eligibility
+- question: How long does the expert panel take to decide after the full proposal?
+  role: viewer
+  expected: application-process
+- question: How often do funded companies submit interim reports?
+  role: employee
+  expected: reporting-obligations
+- question: How long must project documents be kept?
+  role: employee
+  expected: reporting-obligations
+- question: What funding rate applied to small companies in the 2025 call?
+  role: employee
+  expected: funding-rates-2025
+- question: What percentage of projects does finance control audit each year?
+  role: finance
+  expected: audit-checklist
+- question: How many quotes are needed for external R&D invoices?
+  role: finance
+  expected: audit-checklist
+# permission checks
+- question: What percentage of projects does finance control audit each year?
+  role: employee
+  forbidden: audit-checklist
+- question: How often do funded companies submit interim reports?
+  role: viewer
+  forbidden: reporting-obligations
